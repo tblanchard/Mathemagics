@@ -32,7 +32,7 @@ MathExpressionBasicMethodsTest >> testAsBlock [
 
 	"More variables.. (and I will assume more than 2 continues to work)"
 	fx := MathExpression from: 'sin(n) + m^2 + 8*o'.
-	self assert: fx asBlock asString equals: [ :m :n :o | n sin + (m ** 2) + (8*o) ] asString.
+	self assert: fx asBlock asString equals: [ :m :n :o | n sin + (m ** 2) + (8 * o) ] asString.
 
 	"Log is a bit special.. (ln, log, log:)"
 	fx := MathExpLogarithm leftSide: MathExpNumber eight rightSide: MathExpNumber two.
